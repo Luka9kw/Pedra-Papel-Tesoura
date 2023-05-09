@@ -3,29 +3,21 @@ const inputPedra = document.querySelector('#pedra');
 const inputTesoura = document.querySelector('#tesoura');
 const res = document.querySelector('#resultado');
 
-let pedra = '';
-let papel = '';
-let tesoura = '';
+let escolhaUsuario = ''
 
+// Define o valor de escolha do usuário
 inputPedra.addEventListener('click', function () {
-    pedra = true;
-    papel = false;
-    tesoura = false;
+    escolhaUsuario = 'pedra';
     resultado();
 })
 
-
 inputPapel.addEventListener('click', function () {
-    pedra = false;
-    papel = true;
-    tesoura = false;
+    escolhaUsuario = 'papel';
     resultado();
 })
 
 inputTesoura.addEventListener('click', function () {
-    pedra = false;
-    papel = false;
-    tesoura = true;
+    escolhaUsuario = 'tesoura';
     resultado();
 })
 
@@ -35,29 +27,21 @@ function resultado() {
     let randomCPU = PPT[cpuPPT];
 
     // Condições de Vitória
-    if (randomCPU == 'pedra' && papel) {
+    if (randomCPU == 'pedra' && escolhaUsuario == 'papel') {
         final.innerHTML = 'Você venceu!';
         final.style.color = 'green';
     }
-    else if (randomCPU == 'papel' && tesoura) {
+    else if (randomCPU == 'papel' && escolhaUsuario == 'tesoura') {
         final.innerHTML = 'Você venceu!';
         final.style.color = 'green';
     }
-    else if (randomCPU == 'tesoura' && pedra) {
+    else if (randomCPU == 'tesoura' && escolhaUsuario == 'pedra') {
         final.innerHTML = 'Você venceu!';
         final.style.color = 'green';
     }
 
     // Condições de Empate
-    else if (randomCPU == 'pedra' && pedra) {
-        final.innerHTML = 'Empate!';
-        final.style.color = 'black';
-    }
-    else if (randomCPU == 'papel' && papel) {
-        final.innerHTML = 'Empate!';
-        final.style.color = 'black';
-    }
-    else if (randomCPU == 'tesoura' && tesoura) {
+    else if (randomCPU == escolhaUsuario) {
         final.innerHTML = 'Empate!';
         final.style.color = 'black';
     }
@@ -69,6 +53,7 @@ function resultado() {
     }
 }
 
+// Cria o elemento HTML para a exibição do resultado
 const final = document.createElement('p');
 final.setAttribute('id', 'textoResultado')
 res.appendChild(final);
