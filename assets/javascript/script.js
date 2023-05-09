@@ -36,32 +36,40 @@ function resultado() {
 
     // Condições de Vitória
     if (randomCPU == 'pedra' && papel) {
-        final.innerHTML = 'Você venceu!'
+        final.innerHTML = 'Você venceu!';
+        final.style.color = 'green';
     }
     else if (randomCPU == 'papel' && tesoura) {
-        final.innerHTML = 'Você venceu!'
+        final.innerHTML = 'Você venceu!';
+        final.style.color = 'green';
     }
     else if (randomCPU == 'tesoura' && pedra) {
-        final.innerHTML = 'Você venceu!'
+        final.innerHTML = 'Você venceu!';
+        final.style.color = 'green';
     }
 
     // Condições de Empate
     else if (randomCPU == 'pedra' && pedra) {
-        final.innerHTML = 'Empate!'
+        final.innerHTML = 'Empate!';
+        final.style.color = 'black';
     }
     else if (randomCPU == 'papel' && papel) {
-        final.innerHTML = 'Empate!'
+        final.innerHTML = 'Empate!';
+        final.style.color = 'black';
     }
     else if (randomCPU == 'tesoura' && tesoura) {
-        final.innerHTML = 'Empate!'
+        final.innerHTML = 'Empate!';
+        final.style.color = 'black';
     }
 
     // Condições de Derrota
     else {
-        final.innerHTML = 'Você perdeu!'
+        final.innerHTML = 'Você perdeu!';
+        final.style.color = 'red';
     }
 }
 
 const final = document.createElement('p');
+final.setAttribute('id', 'textoResultado')
 res.appendChild(final);
 
