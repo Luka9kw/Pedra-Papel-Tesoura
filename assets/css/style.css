@@ -31,11 +31,11 @@
     width: 27vw;
     height: 27vw;
     margin: 50px 15px 0px 15px;
-    max-width: 1980px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
     filter: contrast(90%) saturate(95%);
     border: 4px solid #e5af3200 ;
+  
 }
 
 
@@ -50,6 +50,18 @@
     border: 4px  solid #E5B032 ;
     
 }
+
+@media (min-width: 1200px) {
+    .pptImg {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .pptImg:hover {
+        width: 16vw;
+        height: 16vw;
+} }
+
 
 
 #textoResultado {
