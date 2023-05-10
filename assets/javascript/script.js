@@ -24,7 +24,8 @@ inputTesoura.addEventListener('click', function () {
 function resultado() {
     let PPT = ['pedra', 'papel', 'tesoura'];
     let cpuPPT = Math.floor(Math.random() * PPT.length);
-    let randomCPU = PPT[cpuPPT];
+    const randomCPU = PPT[cpuPPT];
+    pickCPU.innerHTML = `Seu adversário escolheu <strong>${randomCPU}</strong>`
 
     // Condições de Vitória
     if (randomCPU == 'pedra' && escolhaUsuario == 'papel') {
@@ -50,10 +51,16 @@ function resultado() {
     else {
         final.innerHTML = 'Você perdeu!';
         final.style.color = 'red';
-    }
+    }    
 }
 
-// Cria o elemento HTML para a exibição do resultado
+
+// Cria o elemento que presenta a escolha da CPU
+const pickCPU = document.createElement('p');
+pickCPU.setAttribute('id', 'escolhaCPU')
+res.appendChild(pickCPU);
+
+// Cria o elemento HTML para a exibição do resultado final
 const final = document.createElement('p');
 final.setAttribute('id', 'textoResultado')
 res.appendChild(final);
