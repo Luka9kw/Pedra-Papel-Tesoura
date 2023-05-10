@@ -1,17 +1,11 @@
 @charset "UTF-8";
 
 
-#container {
-    color: white;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    margin-bottom: 40px;
-}
 
 #cabecalho {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #202124;
 }
 
 #cabecalho > h1 {
@@ -22,6 +16,15 @@
 #cabecalho > h2 {
     font-size: 1.3em;
     margin: 0px;
+}
+
+
+#container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .pptImg {
@@ -40,6 +43,9 @@
     transition: 0.2s;
     width: 29vw;
     height: 29vw;
+    margin-bottom: -2vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
 }
 
 
