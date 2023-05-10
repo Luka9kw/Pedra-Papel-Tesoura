@@ -1,25 +1,58 @@
 @charset "UTF-8";
 
 
-#container input {
-    padding: 20px;
-    border: none;
-    border-radius: 4px;
+#container {
     color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 40px;
 }
 
-#pedra {
-    background-color: green;
+#cabecalho {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#papel {
-    background-color: red;
+#cabecalho > h1 {
+    font-size: 2.3em;
+    margin: 30px 0px 8px 0px;
 }
 
-#tesoura {
-    background-color: blue;
+#cabecalho > h2 {
+    font-size: 1.3em;
+    margin: 0px;
 }
+
+.pptImg {
+    transition: 0.2s;
+    width: 27vw;
+    height: 27vw;
+    margin: auto;
+    margin: 50px 15px 0px 15px;
+    max-width: 1980px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
+}
+
+
+.pptImg:hover {
+    transition: 0.2s;
+    width: 29vw;
+    height: 29vw;
+}
+
 
 #textoResultado {
+
+
+    margin-top: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-size: 3em;
+    text-align: center;
+}
+
+#resultado {
+    display: absolute;
 }
